@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <title>MongoDB</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">ABM Utilizando NodeJS y MonoDB</h2>
+        <br>
+        <hr>
+        <h3 class="text-center">Modificar</h3>
+        <form action="/modificar" method="POST">
+            <input type="hidden" class="form-control" id="exampleInputEmail1"  name="id" value="<%= persona._id %>" required>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input type="text" class="form-control" id="exampleInputEmail1"  name="nombre" value="<%= persona.nombre %>" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Edad</label>
+                <input type="number" class="form-control" id="exampleInputPassword1" name="edad" value="<%= persona.edad %>">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="/" class="btn btn-warning">Cancelar</a>   
+        </form>
+        <br>
+        <hr>
+        <br>
+    </div>
+     <script src="/js/jquery.min.js"></script>
+     <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

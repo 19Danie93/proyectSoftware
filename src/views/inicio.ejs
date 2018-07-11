@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>MongoDB</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">ABM Utilizando NodeJS y MonoDB</h2>
+        <br>
+        <hr>
+        <h3 class="text-center">Adicionar</h3>
+        <form action="/adicionar" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Edad</label>
+                <input type="number" class="form-control" id="exampleInputPassword1" name="edad" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="reset" class="btn btn-warning">Cancelar</button>   
+        </form>
+        <br>
+        <hr>
+        <br>
+        <h3>Lista de Personas</h3>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th width="100px">Nro</th>
+                    <th>Nombre</th>
+                    <th width="100px">Edad</th>
+                    <th width="100px">Estado</th>
+                    <th width="300px">ABM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i<lista.length; i++) { %> 
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= lista[i].nombre %></td>
+                    <td><%= lista[i].edad %></td>
+                    <% if(lista[i].estado == true) { %>
+                    <td>Activo</td>
+                    <% } %>
+                    <td>
+                        <a class="btn btn-info" href="/obtener/<%= lista[i]._id %>">Modificar</a>
+                        <a class="btn btn-danger" href="/borrar/<%= lista[i]._id %>">Borrar</a>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
