@@ -32,11 +32,11 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th width="100px">Nro</th>
+                    <th width="10%">Nro</th>
                     <th>Nombre</th>
-                    <th width="100px">Edad</th>
-                    <th width="100px">Estado</th>
-                    <th width="300px">ABM</th>
+                    <th width="10%">Edad</th>
+                    <th width="10%">Estado</th>
+                    <th width="30%">ABM</th>
                 </tr>
             </thead>
             <tbody>
@@ -49,8 +49,8 @@
                     <td>Activo</td>
                     <% } %>
                     <td>
-                        <a class="btn btn-info" href="/obtener/<%= lista[i]._id %>">Modificar</a>
-                        <a class="btn btn-danger" href="/borrar/<%= lista[i]._id %>">Borrar</a>
+                        <a class="btn btn-info" href="/obtener/<%= lista[i]._id %>">M</a>
+                        <a class="btn btn-danger" href="/borrar/<%= lista[i]._id %>">B</a>
                     </td>
                 </tr>
                 <% } %>
