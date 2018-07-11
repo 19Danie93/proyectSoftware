@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const indexRoutes = require('./rutas/index');
 
 //conexion a MONGODB
-mongoose.connect('mongodb://localhost:27017/persona').then(
+mongoose.connect('mongodb://daniel:tapiceria1@ds233581.mlab.com:33581/tapiceria').then(
        db => console.log('conectado a mongo ')
        ).catch(
        err => console.log('error al conectar'));
